@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>
+		現場狀況
+		</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta charset="現場狀況">
+		<meta name="description" content="">
+		<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+		<meta name="author" content="Hege Refsnes">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+ 
+	<body>
+	<div class="w3-row-padding w3-margin-bottom w3-green">
+     <div class="w3-container ">
+	  <a href="index.html" >
+        <div class="w3-left"><h3>現場狀況</h3></div>
+        <div class="w3-right">
+         <i class="fa fa-home w3-xxxlarge"></i>
+        </div>
+        <div class="w3-clear"></div>
+       </a>
+      </div>
+	   </div>
+		<!-- Photo grid (modal) -->
+	  <div class="w3-row-padding">
+		<div class="w3-col">
+		  <img src="map.png" style="width:100%" onclick="onClick(this)" alt="區域圖">
+		</div>
+
+		
+	  </div>
+
+	  <!-- Modal for full size images on click-->
+	  <div id="modal" class="w3-modal w3-black w3-padding-0" onclick="this.style.display='none'">
+		<span class="w3-closebtn w3-text-white w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright">×</span>
+		<div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+		  <img id="img" class="w3-image">
+		  <p id="caption2"></p>
+		</div>
+	  </div>
+	  <script>
+	// Script to open and close sidenav
+	function w3_open() {
+		document.getElementById("mySidenav").style.display = "block";
+		document.getElementById("myOverlay").style.display = "block";
+	}
+	 
+	function w3_close() {
+		document.getElementById("mySidenav").style.display = "none";
+		document.getElementById("myOverlay").style.display = "none";
+	}
+
+	// Modal Image Gallery
+	function onClick(element) {
+	  document.getElementById("img").src = element.src;
+	  document.getElementById("modal").style.display = "block";
+	  var captionText = document.getElementById("caption2");
+	  captionText.innerHTML = element.alt;
+	}
+	</script>
+	  </body>
+	</html>
+	</html>
